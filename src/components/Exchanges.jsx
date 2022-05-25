@@ -15,7 +15,7 @@ const Exchanges = () => {
 
   return (
     <>
-      <Row>
+      <Row style={{ paddingLeft: 20, paddingRight: 30 }}>
         <Col span={6}>
           <Title level={4}>Trust Score Rank</Title>
         </Col>
@@ -31,10 +31,10 @@ const Exchanges = () => {
       </Row>
       <Row>
         {exchangesList.map(exchange => (
-          <Col span={24}>
+          <Col span={24} key={exchange.id}>
             <a href={exchange.url}>
               <Card hoverable style={{ borderRadius: "10px", margin: "6px" }}>
-                <Row key={exchange.id}>
+                <Row>
                   <Col span={6}>
                     <Text>
                       <strong>{exchange.trust_score_rank}.</strong>
